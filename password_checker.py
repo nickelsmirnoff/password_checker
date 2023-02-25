@@ -17,10 +17,7 @@ def pass_checker(string_checked):
         symb_dict['AZ'] = 1
     if re.search(r"[^\d\w]",string_checked):
         symb_dict['sp'] = 1
-    if min(symb_dict.values()) == 0:
-        return False
-    else:
-        return True
+    return min(symb_dict.values()) == 0
 
 
 print(pass_checker(str_input))
